@@ -15,7 +15,7 @@ const problemSchema = new mongoose.Schema({
         required : [true, `Description can't be empty`],
         default : 'easy'
     },
-    testCase: [
+    testCases: [
         {
             input: {
                 type: String,
