@@ -11,9 +11,10 @@ class ProblemRepository {
                 description: problemData.description,
                 testCases: (problemData.testCases) ? problemData.testCases: []
             })
+            logger.info(`Add problem: ${ problemData } into db`);
             return problem;
         } catch(error) {
-            console.log(error);
+            logger.error(`Error inserting problem: ${problemData} into db`);
             throw error;
         }
     }
@@ -23,7 +24,7 @@ class ProblemRepository {
             const problems = await Problem.find ({});
             return problems;
         } catch(error) {
-            console.log(error);
+            logger.error(`Error getting all problems from db`);
             throw error;
         }
     }
@@ -37,7 +38,7 @@ class ProblemRepository {
             }
             return problem;
         } catch(error) {
-            console.log(error);
+            logger.error(`Problem getting the problem with ${id} from db`);
             throw error;
         }
     }
@@ -51,7 +52,7 @@ class ProblemRepository {
             }
             return deletedProblem;
         }catch(error) {
-            console.log(error);
+            logger.error(`Problem deleting the problem with id:${id} from db`);
             throw error;
         }
     }

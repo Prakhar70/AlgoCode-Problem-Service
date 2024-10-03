@@ -21,7 +21,8 @@ allowedTransport.push(new winston.transports.Console({
 allowedTransport.push(new winston.transports.MongoDB({
     level:'error',//only want to log error in mongodb
     db: LOG_DB_URL,
-    collection: 'logs'
+    collection: 'logs',
+    options: { useUnifiedTopology: true },// to fix warning 
 }));
 
 // The below transport configuration enables logging on the mongoDb database
