@@ -17,12 +17,6 @@ It is designed to provide a robust and flexible API for interacting with problem
   - [Delete Problem by ID](#delete-problem-by-id)
   - [Update Problem by ID](#update-problem-by-id)
 - [Installation](#installation)
-- [Usage](#usage)
-  - [Testing with Postman](#testing-with-postman)
-  - [Common Commands](#common-commands)
-- [Contributing](#contributing)
-- [License](#license)
-
 ---
 
 ## API Endpoints
