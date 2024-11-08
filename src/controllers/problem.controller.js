@@ -12,12 +12,12 @@ function pingProblemController (req, res){
 async function addProblem (req, res, next){
     try {
      
-      const newproblem = await problemService.createProblem(req.body);
+      const newProblem = await problemService.createProblem(req.body);
       return res.status(StatusCodes.CREATED).json({
           success: true,
           message: 'Successfully create a new problem',
           error: {},
-          data: newproblem
+          data: newProblem
       });
     } catch (error){
         next (error)
@@ -67,10 +67,15 @@ async function deleteProblem (req, res, next){
     }
 }
 
-function updateProblem (req, res, next){
+async function updateProblem (req, res, next){
     try {
-        //nothing implemented
-        throw new NotImplementedError('addProblem')
+        const updatedProblem = await problemService.updateProblem(req.params.id, req.body);
+        return res.status(StatusCodes.OK).json({
+            success: true,
+            message: 'Sucessfully updated the problem',
+            error: {},
+            data: updatedProblem
+        })
     } catch (error){
         next (error)
     }

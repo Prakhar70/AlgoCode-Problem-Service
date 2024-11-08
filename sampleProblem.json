@@ -1,15 +1,15 @@
 {
-    "title":"Sample Problem 2",
-    "description":"\n###Hello world \n\n##New Problem",
+    "title":"Sample Problem 1",
+    "description":"\n###Add Two Numbers\n\n##Given two numbers add them",
     "difficuly":"easy",
     "testCases":[
         {
-            "input": "3",
-            "output": "9"
+            "input": "3\n4",
+            "output": "12"
         },
         {
-            "input": "4",
-            "output": "16"
+            "input": "4\n5",
+            "output": "9"
         }
        
     ],
@@ -17,11 +17,10 @@
     "codeStubs":[
         {
             "language":"JAVA",
-            "startSnippet":"//{ Driver Code Starts\n// Initial Template for Java\n\nimport java.io.*;\nimport java.util.*;\n\nclass GFG {\n\n    public static void main(String[] args) throws IOException {\n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n\n        int t = Integer.parseInt(br.readLine().trim());\n        while (t-- > 0) {\n            int n = Integer.parseInt(br.readLine().trim());\n            String[] str = br.readLine().trim().split(\" \");\n            int[] arr = new int[n - 1];\n            for (int i = 0; i < n - 1; i++) {\n                arr[i] = Integer.parseInt(str[i]);\n            }\n            Solution sln = new Solution();\n            System.out.println(sln.missingNumber(n, arr));\n        }\n    }\n}\n// } Driver Code Ends",
-            "userSnippet":"// User function Template for Java\nclass Solution {\n\n    // Note that the size of the array is n-1\n    int missingNumber(int n, int arr[]) {\n\n        // Your Code Here\n    }\n}",
+            "startSnippet":"// Driver Code Starts\n// Initial Template for Java\nimport java.io.*;\nimport java.util.*;\nclass GFG {\n    public static void main(String[] args) throws IOException \n    {\n        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));\n        int t = Integer.parseInt(br.readLine().trim());\n        while (t-- > 0) {\n            int a = Integer.parseInt(br.readLine().trim());\n            int b = Integer.parseInt(br.readLine().trim());\n            Solution sln = new Solution();\n            System.out.println(sln.addNumbers(a,b));\n        }\n    }\n}\n// } Driver Code Ends",
+            "userSnippet":"class Solution {\n    int addNumbers(int a, int b) {\n        // Your Code Here\n    }\n}",
             "endSnippet":""
 
         }
     ]
-
 }

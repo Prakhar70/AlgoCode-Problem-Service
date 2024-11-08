@@ -21,7 +21,9 @@ app.get ('/ping', (req, res)=>{
     return res.status(StatusCodes.OK).json ({message: 'Problem Service is alive'});
 })
 
-//last middleware
+// There is default express error middleware https://expressjs.com/en/guide/error-handling.html
+//,but we have added our own ....
+// last middleware if any error comes
 app.use(errorHandler);
 
 app.listen (PORT, async ()=>{

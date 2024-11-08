@@ -1,6 +1,4 @@
 # Algocode Problem Setting service
-
-
 -----------------------------
 
 # How routing is working in this project
