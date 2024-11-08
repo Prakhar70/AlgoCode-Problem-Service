@@ -1,4 +1,3 @@
-const NotImplementedError = require('../errors/notimplemented.error');
 const { ProblemService } = require('../services');
 const { ProblemRepository } = require('../repositories');
 const { StatusCodes } = require('http-status-codes');
