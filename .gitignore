@@ -1,5 +1,5 @@
 node_modules/
 .env
 app.log
-./sampleProblem.json
-./sampleProblem2.java
+sampleProblem.json
+sampleProblem2.java
